@@ -1,6 +1,6 @@
 "use client";
 import { Card } from "@/components/ui/card";
-import { Code, Zap, Globe, Shield } from "lucide-react";
+import { Code, Zap, Globe, Shield, Bot, Palette } from "lucide-react";
 
 export function ServicesSection() {
   const services = [
@@ -28,6 +28,18 @@ export function ServicesSection() {
       description:
         "Protege tus datos y sistemas con nuestras soluciones de seguridad.",
     },
+    {
+      icon: Bot,
+      title: "Aplicaciones RPA",
+      description:
+        "Automatiza procesos repetitivos y optimiza la eficiencia operacional de tu empresa.",
+    },
+    {
+      icon: Palette,
+      title: "Diseño UI/UX",
+      description:
+        "Interfaces intuitivas y experiencias de usuario excepcionales que conectan con tu audiencia.",
+    },
   ];
 
   return (
@@ -49,7 +61,7 @@ export function ServicesSection() {
             inteligentes.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
