@@ -20,21 +20,23 @@ export function HeroSection() {
             className="space-y-8"
           >
             {/* Badge */}
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
-              <span className="text-cyan-400 text-sm font-medium">DESARROLLO WEB</span>
-            </div>
+            {/* <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+              <span className="text-cyan-400 text-sm font-medium">
+                DESARROLLO WEB
+              </span>
+            </div> */}
 
             {/* Main heading */}
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-              Construye tu
-              <span className="text-cyan-400 block">Aplicación Web</span>
-              Personalizada
+              <span className="text-cyan-400 block">Innovación Digital</span>
+              que Impulsa tu Negocio
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl text-gray-300 max-w-xl">
-              Desarrollamos sistemas web a medida que impulsan tu negocio. 
-              Desde simples landing pages hasta complejas plataformas empresariales.
+            <p className="text-sm text-gray-300 max-w-xl">
+              Te ayudamos a transformar tus procesos con soluciones web a medida
+              que mejoran tu eficiencia y potencian tu crecimiento.
+              <br />
             </p>
 
             {/* CTA Buttons */}
@@ -43,8 +45,8 @@ export function HeroSection() {
                 size="lg"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25"
                 onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ 
-                    behavior: 'smooth' 
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
                   });
                 }}
               >
@@ -55,14 +57,18 @@ export function HeroSection() {
                 size="lg"
                 className="border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
                 onClick={() => {
-                  document.getElementById('services')?.scrollIntoView({ 
-                    behavior: 'smooth' 
+                  document.getElementById("services")?.scrollIntoView({
+                    behavior: "smooth",
                   });
                 }}
               >
                 Ver Servicios
               </Button>
             </div>
+            <sub>
+              👋 Consulta con nuestros expertos y descubre cómo modernizar tus
+              procesos.
+            </sub>
           </motion.div>
 
           {/* Right Image */}
@@ -87,17 +93,19 @@ export function HeroSection() {
                       https://tu-aplicacion-web.com
                     </div>
                   </div>
-                  
+
                   {/* Dashboard content */}
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-white font-semibold">Dashboard Personalizado</h3>
+                      <h3 className="text-white font-semibold">
+                        Dashboard Personalizado
+                      </h3>
                       <div className="flex gap-2">
                         <div className="w-8 h-8 bg-cyan-500 rounded-full"></div>
                         <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-3 gap-3">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg p-3 text-white">
                         <div className="text-2xl font-bold">234</div>
@@ -112,11 +120,13 @@ export function HeroSection() {
                         <div className="text-xs opacity-80">Uptime</div>
                       </div>
                     </div>
-                    
+
                     <div className="bg-gray-800 rounded-lg p-4">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-                        <span className="text-gray-300 text-sm">Sistema en Funcionamiento</span>
+                        <span className="text-gray-300 text-sm">
+                          Sistema en Funcionamiento
+                        </span>
                       </div>
                       <div className="space-y-2">
                         <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -131,7 +141,7 @@ export function HeroSection() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold">Web</span>

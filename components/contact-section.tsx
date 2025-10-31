@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
+import { sendContactEmail } from "@/app/actions/mail";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -58,8 +59,20 @@ export function ContactSection() {
 
     // Simulate form submission
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log("Form submitted:", formData);
+      const result = await sendContactEmail(
+        formData.name,
+        formData.email,
+        formData.message
+      );
+      // Simulate network delay
+      console.log(result);
+
+      if (result.success) {
+        alert("Mensaje enviado exitosamente.");
+      } else {
+        alert("Error al enviar el mensaje. Por favor, intenta nuevamente.");
+      }
+
       // Reset form after successful submission
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
