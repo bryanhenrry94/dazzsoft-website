@@ -27,7 +27,7 @@ export function Navigation() {
               alt="DAZZSOFT Logo"
               width={150}
               height={40}
-              className="hidden md:block"
+              // className="hidden md:block"
             />
           </Link>
 
