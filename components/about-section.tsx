@@ -53,7 +53,7 @@ export function AboutSection() {
         "Supervisa las finanzas y garantiza la precisión en la gestión contable, apoyando decisiones estratégicas.",
     },
     {
-      name: "Yailing Fun sang",
+      name: "Youling Fun sang",
       role: "Project Managment",
       avatar: "YF",
       description:

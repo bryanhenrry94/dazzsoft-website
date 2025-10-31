@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 
 export function TestimonialsSection() {
   const testimonials = [
-    {
-      name: "Mercy Zambrano",
-      role: "Jefe de Aplicaciones, Generali Ecuador",
-      content:
-        "DAZZSOFT transformó completamente nuestra plataforma. Su enfoque ágil y comunicación constante hicieron que el proyecto fuera un éxito total.",
-      rating: 5,
-    },
+    // {
+    //   name: "Mercy Zambrano",
+    //   role: "Jefe de Aplicaciones, Generali Ecuador",
+    //   content:
+    //     "Estamos encantados con el apoyo que DAZZSOFT brindó al área de aplicaciones. Su comunicación constante y enfoque ágil marcaron la diferencia en el éxito de nuestros proyectos.",
+    //   rating: 5,
+    // },
     {
       name: "Johnny Anchundia",
       role: "Gerente General, Fundisel",
@@ -20,13 +20,20 @@ export function TestimonialsSection() {
         "El equipo demostró un nivel excepcional de profesionalismo y expertise técnico. Entregaron nuestro sistema a tiempo y superaron expectativas.",
       rating: 5,
     },
-    {
-      name: "Sebastián Holzapfel",
-      role: "Gerente TI, EDEHSA S.A.",
-      content:
-        "Trabajar con DAZZSOFT fue una experiencia increíble. Su metodología ágil nos permitió ver avances constantes y hacer ajustes en tiempo real.",
-      rating: 5,
-    },
+    // {
+    //   name: "Sebastián Holzapfel",
+    //   role: "Gerente TI, EDEHSA S.A.",
+    //   content:
+    //     "Trabajar con DAZZSOFT fue una experiencia increíble. Su metodología ágil nos permitió ver avances constantes y hacer ajustes en tiempo real.",
+    //   rating: 5,
+    // },
+    // {
+    //   name: "Luis Tufiño",
+    //   role: "Ingeniero de Datos y Automatización, Generali Ecuador",
+    //   content:
+    //     "La colaboración con DAZZSOFT ha sido fundamental para optimizar nuestros procesos internos. Su enfoque en RPA ha mejorado significativamente nuestra eficiencia operativa.",
+    //   rating: 5,
+    // }
   ];
 
   return (
@@ -44,7 +51,7 @@ export function TestimonialsSection() {
           Lo que dicen nuestros clientes
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
