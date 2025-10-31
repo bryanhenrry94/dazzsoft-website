@@ -1,15 +1,16 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 export function ClientsSection() {
   const clients = [
-    { name: "ProLine", logo: "/images/customers/cliente1.png" },
-    { name: "Hues", logo: "/images/customers/cliente2.png" },
-    { name: "Greenish", logo: "/images/customers/cliente3.png" },
-    { name: "Cloud", logo: "/images/customers/cliente4.png" },
-    { name: "Volume", logo: "/images/customers/cliente5.png" },
-    { name: "PinPoint", logo: "/images/customers/cliente6.png" },
+    { name: "Generali", logo: "/images/customers/cliente1.png" },
+    { name: "Edehsa", logo: "/images/customers/cliente2.png" },
+    { name: "Fundisel", logo: "/images/customers/cliente3.png" },
+    { name: "Medistep", logo: "/images/customers/cliente4.png" },
+    { name: "Comunica Digital", logo: "/images/customers/cliente5.png" },
+    { name: "CIO", logo: "/images/customers/cliente6.png" },
+    { name: "Centrallinning", logo: "/images/customers/cliente7.png" },
+    { name: "Ecuare", logo: "/images/customers/cliente8.png" },
   ];
 
   return (
