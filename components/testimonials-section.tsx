@@ -15,7 +15,7 @@ export function TestimonialsSection() {
     },
     {
       name: "Johnny Anchundia",
-      role: "Gerente General, Fundisel",
+      role: "CEO, Fundisel",
       content:
         "El equipo demostró un nivel excepcional de profesionalismo y expertise técnico. Entregaron nuestro sistema a tiempo y superaron todas nuestras expectativas.",
       rating: 5,
