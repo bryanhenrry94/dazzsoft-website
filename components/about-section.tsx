@@ -59,6 +59,13 @@ export function AboutSection() {
       description:
         "Gestiona cada fase del proyecto para asegurar resultados óptimos, organizando tiempos y recursos de forma eficiente.",
     },
+    {
+      name: "Joselyn Andrade",
+      role: "Manager Assistant",
+      avatar: "JA",
+      description:
+        "Brinda soporte administrativo y operativo, facilitando la comunicación y coordinación interna.",
+    },
   ];
 
   const values = [
@@ -106,22 +113,37 @@ export function AboutSection() {
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
             Nuestro Equipo
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {team.map((member, index) => (
-              <Card
-                key={index}
-                className="p-6 text-center bg-gray-900/50 border-gray-800 hover:border-cyan-400 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/20"
-              >
-                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-black font-bold text-xl">
-                  {member.avatar}
+
+          <div className="space-y-8 max-w-6xl mx-auto">
+            {/* Display team members in rows of 5 */}
+            {Array.from(
+              { length: Math.ceil(team.length / 5) },
+              (_, rowIndex) => (
+                <div
+                  key={rowIndex}
+                  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center"
+                >
+                  {team
+                    .slice(rowIndex * 5, (rowIndex + 1) * 5)
+                    .map((member, index) => (
+                      <div
+                        key={rowIndex * 5 + index}
+                        className="text-center group"
+                      >
+                        <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 font-bold text-lg transition-transform duration-300 group-hover:scale-105">
+                          {member.avatar}
+                        </div>
+                        <h4 className="text-lg font-semibold mb-1 text-white">
+                          {member.name}
+                        </h4>
+                        <p className="text-cyan-400 text-sm font-medium">
+                          {member.role}
+                        </p>
+                      </div>
+                    ))}
                 </div>
-                <h4 className="text-xl font-semibold mb-2">{member.name}</h4>
-                <p className="text-cyan-400 mb-3 font-medium">{member.role}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {member.description}
-                </p>
-              </Card>
-            ))}
+              )
+            )}
           </div>
         </div>
 
