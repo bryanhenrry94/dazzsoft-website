@@ -16,12 +16,15 @@ export async function sendContactEmail(
     }
 
     const sentFrom = new Sender(
-      "info@test-zxk54v810pqljy6v.mlsender.net",
-      "Dazzsoft Website"
+      process.env.MAILERSEND_SENDER_EMAIL || "",
+      process.env.MAILERSEND_SENDER_NAME || ""
     );
 
     const recipients = [
-      new Recipient("info@dazzsoft.com", "DAZZSOFT S.A.S."),
+      new Recipient(
+        process.env.MAILERSEND_SENDER_EMAIL || "",
+        process.env.MAILERSEND_SENDER_NAME || ""
+      ),
     ];
 
     const replyTo = new Sender(email, name);
@@ -37,7 +40,9 @@ export async function sendContactEmail(
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Message:</strong> ${message}</p>`
       )
-      .setText(`New Contact Message\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      .setText(
+        `New Contact Message\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`
+      );
 
     await mailerSend.email.send(emailParams);
     return { success: true, message: "Email sent successfully" };
