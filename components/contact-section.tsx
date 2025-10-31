@@ -235,29 +235,47 @@ export function ContactSection() {
               </form>
             </Card>
           </div>
-          <div className="space-y-6 mt-10 lg:mt-0">
-            {contactInfo.map((info) => {
+          <div className="space-y-4 mt-10 lg:mt-0">
+            {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
                 <Card
                   key={info.title}
-                  className="p-4 flex items-center gap-4 bg-gray-800/50 border-cyan-500/30 backdrop-blur-sm"
+                  className="group p-4 bg-gray-800/60 border-cyan-500/30 backdrop-blur-sm hover:bg-gray-800/80 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 hover:scale-[1.02] cursor-pointer"
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
                 >
-                  <div className="p-3 bg-cyan-500/20 rounded-lg">
-                    <Icon className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">{info.title}</h4>
-                    {info.link ? (
-                      <a
-                        href={info.link}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                      >
-                        {info.value}
-                      </a>
-                    ) : (
-                      <p className="text-gray-300">{info.value}</p>
-                    )}
+                  <div className="flex items-center gap-4">
+                    {/* Icon Section - Left */}
+                    <div className="flex-shrink-0">
+                      <div className="p-3 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-cyan-600/30 transition-all duration-300 group-hover:scale-110">
+                        <Icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
+                      </div>
+                    </div>
+
+                    {/* Content Section - Right */}
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-white font-semibold text-base mb-1 group-hover:text-cyan-100 transition-colors duration-300">
+                        {info.title}
+                      </h4>
+                      {info.link ? (
+                        <a
+                          href={info.link}
+                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium text-sm group-hover:text-cyan-300 inline-flex items-center gap-1 break-all"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {info.value}
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0">
+                            →
+                          </span>
+                        </a>
+                      ) : (
+                        <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 font-medium text-sm">
+                          {info.value}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </Card>
               );
