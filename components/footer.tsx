@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { ExternalLink, Globe, Mail, Phone } from "lucide-react";
+import {
+  ExternalLink,
+  Mail,
+  Phone,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -52,20 +58,30 @@ export function Footer() {
             <h3 className="font-semibold mb-4 text-gray-200">Redes Sociales</h3>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com/company/dazzsoft"
+                href="https://www.linkedin.com/in/bryan-navarrete-2a8590228"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"
               >
-                <ExternalLink className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://dazzsoft.com"
+                href="https://www.instagram.com/dazzsoft?igsh=eGhscHVlZmcyZ3dy&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"
+                title="Instagram"
               >
-                <Globe className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@dazzsoft?_r=1&_t=ZM-910C14mnhfv"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-gray-800 text-gray-400 flex items-center justify-center hover:bg-cyan-600 hover:text-white transition-colors"
+                title="TikTok"
+              >
+                <ExternalLink className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -81,11 +97,11 @@ export function Footer() {
                 info@dazzsoft.com
               </a>
               <a
-                href="tel:+593123456789"
+                href="tel:+593969437708"
                 className="flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +593 12 345 6789
+                +593 96 943 7708
               </a>
             </div>
           </div>
