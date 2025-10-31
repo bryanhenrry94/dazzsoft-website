@@ -79,7 +79,7 @@ export function TestimonialsSection() {
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-medium text-sm">
                     {testimonial.name
                       .split(" ")
