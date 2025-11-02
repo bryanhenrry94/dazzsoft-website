@@ -12,8 +12,8 @@ export function Navigation() {
   const navItems = [
     { href: "#home", label: "Inicio" },
     { href: "#services", label: "Servicios" },
-    { href: "#portfolio", label: "Portafolio" },
     { href: "#about", label: "Nosotros" },
+    { href: "#portfolio", label: "Portafolio" },
     { href: "#contact", label: "Contacto" },
   ];
 

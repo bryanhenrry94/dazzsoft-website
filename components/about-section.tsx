@@ -1,6 +1,3 @@
-import { Card } from "@/components/ui/card";
-import { Heart, Shield, Lightbulb } from "lucide-react";
-
 export function AboutSection() {
   const team = [
     {
@@ -8,179 +5,190 @@ export function AboutSection() {
       role: "CEO & Founder",
       avatar: "BN",
       description:
-        "Encabeza la visión de Dazzsoft, impulsando la innovación y liderando la estrategia de crecimiento.",
+        "Lidera la visión estratégica y el crecimiento de la empresa, enfocándose en la innovación tecnológica y las relaciones con clientes.",
     },
     {
       name: "Erick Gilbert",
       role: "UX/UI Designer",
       avatar: "EG",
       description:
-        "Crea experiencias visuales intuitivas que optimizan la interacción del usuario con nuestras plataformas.",
+        "Diseña interfaces intuitivas y experiencias de usuario excepcionales para aplicaciones web y móviles.",
     },
     {
       name: "Mateo Párraga",
       role: "Web Developer Senior",
       avatar: "MP",
       description:
-        "Desarrolla soluciones web robustas y escalables, enfocándose en el rendimiento y la seguridad.",
+        "Desarrolla aplicaciones web robustas y escalables utilizando tecnologías modernas de frontend y backend.",
     },
     {
       name: "Israel Toala",
       role: "Web Developer Senior",
       avatar: "IT",
       description:
-        "Desarrolla soluciones web robustas y escalables, enfocándose en el rendimiento y la seguridad.",
+        "Especialista en arquitectura de software y desarrollo de soluciones web complejas con enfoque en rendimiento.",
     },
     {
       name: "David Morocho",
       role: "RPA Developer Senior",
       avatar: "DM",
       description:
-        "Especialista en automatización de procesos, optimizando flujos de trabajo mediante tecnologías RPA.",
+        "Automatiza procesos empresariales mediante RPA y desarrolla soluciones de inteligencia artificial para optimización operativa.",
     },
     {
       name: "Catalina Rivas",
       role: "Digital Marketing Specialist",
       avatar: "CR",
       description:
-        "Experta en estrategias de marketing digital y optimización de la presencia en línea.",
+        "Desarrolla estrategias de marketing digital y gestiona campañas para aumentar la presencia online de los clientes.",
     },
     {
       name: "Joselyn Cardona",
       role: "Chief Accounting Officer",
       avatar: "JC",
       description:
-        "Supervisa las finanzas y garantiza la precisión en la gestión contable, apoyando decisiones estratégicas.",
+        "Supervisa las operaciones financieras, presupuestos y análisis económicos para garantizar la salud financiera de la empresa.",
     },
     {
       name: "Youling Fun sang",
-      role: "Project Managment",
+      role: "Project Management",
       avatar: "YF",
       description:
-        "Gestiona cada fase del proyecto para asegurar resultados óptimos, organizando tiempos y recursos de forma eficiente.",
+        "Coordina equipos multidisciplinarios y gestiona proyectos desde la planificación hasta la entrega exitosa.",
     },
     {
       name: "Joselyn Andrade",
       role: "Manager Assistant",
       avatar: "JA",
       description:
-        "Brinda soporte administrativo y operativo, facilitando la comunicación y coordinación interna.",
-    },
-  ];
-
-  const values = [
-    {
-      icon: Heart,
-      title: "Pasión",
-      description:
-        "Amamos lo que hacemos y se refleja en cada línea de código.",
-    },
-    {
-      icon: Shield,
-      title: "Confianza",
-      description:
-        "Construimos relaciones duraderas basadas en transparencia y resultados.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovación",
-      description:
-        "Siempre exploramos nuevas tecnologías para ofrecer soluciones vanguardistas.",
+        "Proporciona soporte administrativo y operativo para optimizar la eficiencia de los procesos internos.",
     },
   ];
 
   return (
     <section
       id="about"
-      className="py-20 px-4 lg:px-8 text-white"
+      className="py-16 lg:py-24 px-4 lg:px-8"
       style={{ backgroundColor: "#0a0a0a" }}
     >
       <div className="container mx-auto">
         {/* Header Section */}
-        <div className="max-w-4xl mx-auto text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-            Quiénes Somos
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">
+            Sobre Dazzsoft
           </h2>
-          <p className="text-xl text-gray-300 text-pretty leading-relaxed">
-            Somos un equipo de profesionales apasionados por la tecnología,
-            dedicados a transformar ideas en soluciones digitales innovadoras
-            que impulsan el crecimiento de tu negocio.
+          <p className="text-lg text-gray-300 text-pretty leading-relaxed mb-6">
+            En Dazzsoft, somos especialistas en desarrollo de software y
+            automatización de procesos. Transformamos ideas en soluciones
+            tecnológicas robustas que optimizan operaciones y aceleran el
+            crecimiento empresarial.
           </p>
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="bg-gray-900/50 p-6 rounded-lg">
+              <h3 className="text-cyan-400 font-semibold mb-2">
+                Nuestra Misión
+              </h3>
+              <p className="text-gray-300 text-sm">
+                Empoderar a las empresas con tecnología innovadora y
+                automatización inteligente para maximizar su eficiencia
+                operativa.
+              </p>
+            </div>
+            <div className="bg-gray-900/50 p-6 rounded-lg">
+              <h3 className="text-cyan-400 font-semibold mb-2">
+                Nuestra Visión
+              </h3>
+              <p className="text-gray-300 text-sm">
+                Ser líderes en soluciones tecnológicas que transformen la manera
+                en que las empresas operan y se conectan con sus clientes.
+              </p>
+            </div>
+            <div className="bg-gray-900/50 p-6 rounded-lg">
+              <h3 className="text-cyan-400 font-semibold mb-2">
+                Nuestros Valores
+              </h3>
+              <p className="text-gray-300 text-sm">
+                Innovación, excelencia técnica, transparencia y compromiso con
+                el éxito de nuestros clientes en cada proyecto.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Team Members Grid */}
-        <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            Nuestro Equipo
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Conoce a Nuestro Equipo
           </h3>
+          <h4 className="text-xl text-gray-400 font-medium mb-8">
+            Apasionados. Proactivos. Expertos.
+          </h4>
+          <p className="text-lg text-gray-300 text-pretty leading-relaxed mb-12 max-w-3xl mx-auto">
+            Nuestro equipo está compuesto por expertos en diversas áreas de la
+            tecnología, listos para llevar tu proyecto al siguiente nivel.
+          </p>
 
-          <div className="space-y-8 max-w-6xl mx-auto">
-            {/* Display team members in rows of 5 */}
-            {Array.from(
-              { length: Math.ceil(team.length / 5) },
-              (_, rowIndex) => (
-                <div
-                  key={rowIndex}
-                  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center"
-                >
-                  {team
-                    .slice(rowIndex * 5, (rowIndex + 1) * 5)
-                    .map((member, index) => (
-                      <div
-                        key={rowIndex * 5 + index}
-                        className="text-center group"
-                      >
-                        <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 font-bold text-lg transition-transform duration-300 group-hover:scale-105">
-                          {member.avatar}
-                        </div>
-                        <h4 className="text-lg font-semibold mb-1 text-white">
-                          {member.name}
-                        </h4>
-                        <p className="text-cyan-400 text-sm font-medium">
-                          {member.role}
-                        </p>
-                      </div>
-                    ))}
+          <div className="space-y-8">
+            {/* First row - 4 members */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+              {team.slice(0, 4).map((member, index) => (
+                <div key={index} className="text-center group max-w-xs">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 font-bold text-lg transition-transform duration-300 group-hover:scale-105 border-2 border-gray-700">
+                    {member.avatar}
+                  </div>
+                  <h4 className="text-lg font-bold mb-1 text-white">
+                    {member.name}
+                  </h4>
+                  <p className="text-cyan-400 text-sm font-medium mb-3">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {member.description}
+                  </p>
                 </div>
-              )
+              ))}
+            </div>
+
+            {/* Second row - 4 members */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+              {team.slice(4, 8).map((member, index) => (
+                <div key={index + 4} className="text-center group max-w-xs">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 font-bold text-lg transition-transform duration-300 group-hover:scale-105 border-2 border-gray-700">
+                    {member.avatar}
+                  </div>
+                  <h4 className="text-lg font-bold mb-1 text-white">
+                    {member.name}
+                  </h4>
+                  <p className="text-cyan-400 text-sm font-medium mb-3">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {member.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Third row - remaining member centered */}
+            {team.length > 8 && (
+              <div className="flex justify-center">
+                <div className="text-center group max-w-xs">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 font-bold text-lg transition-transform duration-300 group-hover:scale-105 border-2 border-gray-700">
+                    {team[8].avatar}
+                  </div>
+                  <h4 className="text-lg font-bold mb-1 text-white">
+                    {team[8].name}
+                  </h4>
+                  <p className="text-cyan-400 text-sm font-medium mb-3">
+                    {team[8].role}
+                  </p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {team[8].description}
+                  </p>
+                </div>
+              </div>
             )}
           </div>
-        </div>
-
-        {/* Company Values */}
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            Nuestros Valores
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {values.map((value, index) => (
-              <Card
-                key={index}
-                className="p-6 text-center bg-gray-900/50 border-gray-800 hover:border-cyan-400 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/20"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-cyan-400/20 rounded-full flex items-center justify-center">
-                  <value.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h4 className="text-xl font-semibold mb-3">{value.title}</h4>
-                <p className="text-gray-300 leading-relaxed">
-                  {value.description}
-                </p>
-              </Card>
-            ))}
-          </div>
-
-          {/* Company Mission Block */}
-          <Card className="p-8 text-center bg-gradient-to-r from-cyan-400/10 to-blue-500/10 border-cyan-400/30 hover:border-cyan-400 transition-all duration-300">
-            <Shield className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-            <h4 className="text-2xl font-bold mb-4 text-cyan-400">
-              Comprometidos con tu Éxito
-            </h4>
-            <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              En cada proyecto, aplicamos nuestra experiencia y dedicación para
-              crear soluciones que no solo cumplan tus expectativas, sino que
-              las superen. Tu confianza es nuestro mayor logro.
-            </p>
-          </Card>
         </div>
       </div>
     </section>

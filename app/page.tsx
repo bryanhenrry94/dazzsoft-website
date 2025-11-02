@@ -8,6 +8,7 @@ import { TestimonialsSection } from "@/components/testimonials-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 import FloatingButton from "@/components/floatting-button";
+import { WhyChooseUsSection } from "@/components/why-choose-us-section";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
       <HeroSection />
       <ClientsSection />
       <ServicesSection />
-      <PortfolioSection />
+      <WhyChooseUsSection />
       <AboutSection />
+      <PortfolioSection />
       <TestimonialsSection />
       <ContactSection />
       <FloatingButton />
