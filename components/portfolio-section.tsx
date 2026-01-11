@@ -9,6 +9,16 @@ export function PortfolioSection() {
   const successCases = [
     {
       id: 1,
+      title: "ECONTIA",
+      client: "Producto Propio",
+      description:
+        "Econtia - Plataforma de Gestión Empresarial creada por DAZZSOFT S.A.S. para optimizar operaciones comerciales.",
+      image: "/images/projects/econtia-webapp.png",
+      imageAlt: "Econtia e-commerce platform",
+      link: "https://econtia.com",
+    },
+    {
+      id: 2,
       title: "Centraal Inning Platform",
       client: "CIO",
       description:
@@ -18,7 +28,7 @@ export function PortfolioSection() {
       link: "https://centraalinning.com",
     },
     {
-      id: 2,
+      id: 3,
       title: "CIO Website",
       client: "CIO",
       description:
@@ -28,7 +38,7 @@ export function PortfolioSection() {
       link: "https://portalci.net",
     },
     {
-      id: 3,
+      id: 4,
       title: "Vsynergy ERP",
       client: "EDEHSA S.A.",
       description:
@@ -38,7 +48,7 @@ export function PortfolioSection() {
       link: "https://edehsa.com/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Fundisel Website",
       client: "Fundisel",
       description:
@@ -48,7 +58,7 @@ export function PortfolioSection() {
       link: "https://fundisel.com",
     },
     {
-      id: 5,
+      id: 6,
       title: "Urbano Acceso System",
       client: "UrbanoAcceso",
       description:
@@ -56,16 +66,6 @@ export function PortfolioSection() {
       image: "/images/projects/urbanoacceso-system.png",
       imageAlt: "Urbano Acceso interface",
       link: "https://urban-web-swart.vercel.app/auth/signin",
-    },
-    {
-      id: 6,
-      title: "Urbano Acceso Website",
-      client: "UrbanoAcceso",
-      description:
-        "Sitio web informativo para una empresa de soluciones de acceso y seguridad urbana.",
-      image: "/images/projects/urbanoacceso-website.png",
-      imageAlt: "Urbano Acceso interface",
-      link: "https://urbanoacceso.com",
     },
   ];
 
