@@ -53,25 +53,15 @@ export function WhyChooseUsSection() {
   return (
     <section
       id="reasons"
-      className="relative py-12 lg:py-16 px-4 lg:px-8 overflow-hidden"
-      style={{ backgroundColor: "#0b0b0b" }}
+      className="relative py-12 lg:py-16 px-4 lg:px-8 overflow-hidden bg-gray-50"
     >
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/5 via-transparent to-cyan-900/5"></div>
-      <div className="absolute top-20 left-10 w-64 h-64 bg-cyan-400/3 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/2 rounded-full blur-3xl"></div>
-
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header Section */}
         <div className="text-center mb-10 lg:mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white leading-tight">
-            ¿Por qué{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-300">
-              elegirnos
-            </span>
-            ?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900 leading-tight">
+            ¿Por qué <span className="text-econtia">elegirnos</span>?
           </h2>
-          <p className="text-gray-300 text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-base max-w-2xl mx-auto leading-relaxed">
             Descubre las razones por las que somos el socio ideal para llevar tu
             proyecto al siguiente nivel.
           </p>
@@ -82,30 +72,27 @@ export function WhyChooseUsSection() {
           {reasons.map((reason, index) => (
             <Card
               key={index}
-              className="group relative p-6 bg-gradient-to-br from-gray-900/80 to-gray-900/40 border border-gray-800 hover:border-cyan-400/50 backdrop-blur-sm transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-400/10 overflow-hidden"
+              className="group relative p-6 bg-white border border-gray-200 hover:border-econtia/50 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl overflow-hidden"
             >
-              {/* Card background glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
               <div className="relative z-10">
                 {/* Icon container */}
                 <div className="relative mb-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-400/20 to-cyan-400/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <reason.icon className="w-7 h-7 text-cyan-400" />
+                  <div className="w-14 h-14 bg-econtia-light rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <reason.icon className="w-7 h-7 text-econtia" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold mb-3 text-white group-hover:text-cyan-100 transition-colors duration-300">
+                <h3 className="text-lg font-bold mb-3 text-gray-900 transition-colors duration-300">
                   {reason.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4 group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 transition-colors duration-300">
                   {reason.description}
                 </p>
 
                 {/* Arrow indicator */}
                 <div
-                  className="flex items-center text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2 cursor-pointer"
+                  className="flex items-center text-econtia opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2 cursor-pointer"
                   onClick={() => {
                     document.getElementById("contact")?.scrollIntoView({
                       behavior: "smooth",
@@ -123,7 +110,7 @@ export function WhyChooseUsSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-10 lg:mt-12">
           <div
-            className="inline-flex items-center gap-2 text-cyan-400 group cursor-pointer"
+            className="inline-flex items-center gap-2 text-econtia group cursor-pointer"
             onClick={() => {
               document.getElementById("contact")?.scrollIntoView({
                 behavior: "smooth",

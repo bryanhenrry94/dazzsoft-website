@@ -22,7 +22,7 @@ export function TestimonialsSection() {
     },
     {
       name: "Sebastián Holzapfel",
-      role: "Gerente de Sistemas, EDEHSA S.A.",
+      role: "Gerente Financiero, EDEHSA S.A.",
       content:
         "Encontramos un aliado estratégico perfecto para nuestro ERP. Su metodología ágil, soporte constante y desarrollos a medida nos han permitido optimizar procesos y avanzar con total confianza.",
       rating: 5,
@@ -51,16 +51,13 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section
-      className="py-16 px-4 lg:px-8"
-      style={{ backgroundColor: "#0d1117" }}
-    >
+    <section className="py-16 px-4 lg:px-8 bg-white">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+          className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
         >
           Lo que dicen nuestros clientes
         </motion.h2>
@@ -72,14 +69,14 @@ export function TestimonialsSection() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-gray-600 transition-all duration-300 h-full"
+              className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg hover:border-econtia/40 transition-all duration-300 h-full"
             >
-              <p className="text-gray-300 text-sm leading-relaxed mb-6 italic">
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 italic">
                 "{testimonial.content}"
               </p>
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-gradient-to-br from-econtia to-econtia-dark rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-medium text-sm">
                     {testimonial.name
                       .split(" ")
@@ -89,10 +86,10 @@ export function TestimonialsSection() {
                   </span>
                 </div>
                 <div className="min-w-0">
-                  <h4 className="font-medium text-white text-sm truncate">
+                  <h4 className="font-medium text-gray-900 text-sm truncate">
                     {testimonial.name}
                   </h4>
-                  <p className="text-xs text-gray-400 truncate">
+                  <p className="text-xs text-gray-500 truncate">
                     {testimonial.role}
                   </p>
                 </div>

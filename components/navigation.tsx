@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,17 +17,13 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-50 bg-[#0d1117]/80 backdrop-blur-lg shadow-lg border-b border-gray-800">
+    <nav className="sticky top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-200">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/dazzsoft-logo-white.png"
-              alt="DAZZSOFT Logo"
-              width={150}
-              height={40}
-              // className="hidden md:block"
-            />
+            <span className="text-lg font-bold tracking-tight text-gray-900">
+              DAZZ<span className="text-econtia">SOFT</span> S.A.S.
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -37,14 +32,14 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                className="text-sm font-medium text-gray-600 hover:text-econtia transition-colors duration-200"
               >
                 {item.label}
               </Link>
             ))}
             <Button
               asChild
-              className="bg-cyan-400 text-black hover:bg-cyan-300"
+              className="bg-econtia text-white hover:bg-econtia-dark"
             >
               <Link href="#contact">Contáctanos</Link>
             </Button>
@@ -52,7 +47,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+            className="md:hidden text-gray-600 hover:text-econtia transition-colors duration-200"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -66,13 +61,13 @@ export function Navigation() {
             isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4 border-t border-gray-800">
+          <div className="py-4 border-t border-gray-200">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-600 hover:text-econtia transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -80,7 +75,7 @@ export function Navigation() {
               ))}
               <Button
                 asChild
-                className="w-full bg-cyan-400 text-black hover:bg-cyan-300"
+                className="w-full bg-econtia text-white hover:bg-econtia-dark"
               >
                 <Link href="#contact" onClick={() => setIsOpen(false)}>
                   Contáctanos

@@ -7,9 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#0d1117",
-        text: "#e2e8f0",
-        accent: "#00ffff",
+        background: "#ffffff",
+        text: "#111827",
+        accent: "#0197b2",
+        econtia: {
+          DEFAULT: "#0197b2",
+          dark: "#017a91",
+          light: "#e6f4f6",
+        },
       },
     },
   },

@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  --color-bg: #0d1117;
-  --color-text: #e2e8f0;
-  --color-accent: #00ffff;
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-accent: #0197b2;
 }
 
 html,
@@ -25,9 +25,9 @@ a {
   transition: color 0.3s ease;
 }
 a:hover {
-  color: #5eead4; /* cyan-300 */
+  color: #017a91; /* econtia-dark */
 }
 
 button {
-  @apply bg-cyan-500 text-black px-4 py-2 rounded-xl font-medium hover:bg-cyan-400 transition;
+  @apply bg-econtia text-white px-4 py-2 rounded-xl font-medium hover:bg-econtia-dark transition;
 }

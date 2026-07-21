@@ -14,13 +14,10 @@ export function ClientsSection() {
   ];
 
   return (
-    <section
-      className="py-4 lg:py-12 px-4 lg:px-8"
-      style={{ backgroundColor: "#0b0b0b" }}
-    >
+    <section className="py-4 lg:py-12 px-4 lg:px-8 border-y border-gray-200 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-6">
-          <p className="text-xs text-gray-400 mb-1 uppercase tracking-wider font-medium">
+          <p className="text-xs text-gray-500 mb-1 uppercase tracking-wider font-medium">
             Empresas que confían en nosotros
           </p>
         </div>
@@ -29,7 +26,7 @@ export function ClientsSection() {
             {[...clients, ...clients].map((client, index) => (
               <div
                 key={index}
-                className="group flex items-center justify-center p-3 rounded border border-gray-800 bg-gray-900/50 hover:bg-gray-800/50 hover:border-cyan-500/50 transition-all duration-300 ease-in-out hover:scale-105 flex-shrink-0 w-36 mx-2"
+                className="group flex items-center justify-center p-3 rounded border border-gray-200 bg-white hover:border-econtia/50 hover:shadow-sm transition-all duration-300 ease-in-out hover:scale-105 flex-shrink-0 w-36 mx-2"
               >
                 <Image
                   src={client.logo}

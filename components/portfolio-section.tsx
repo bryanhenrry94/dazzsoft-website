@@ -70,14 +70,14 @@ export function PortfolioSection() {
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-4 lg:px-8 bg-gray-900 relative">
+    <section id="portfolio" className="py-20 px-4 lg:px-8 bg-gray-50 relative">
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Title Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Portafolio
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Proyectos que transforman ideas en soluciones digitales exitosas
           </p>
         </div>
@@ -87,7 +87,7 @@ export function PortfolioSection() {
           {successCases.map((project) => (
             <Card
               key={project.id}
-              className="group relative overflow-hidden bg-gray-800 border-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+              className="group relative overflow-hidden bg-white border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
@@ -124,7 +124,7 @@ export function PortfolioSection() {
 
                   {/* Ver más button with fade effect */}
                   <button
-                    className={`self-start px-6 py-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-all duration-300 transform ${
+                    className={`self-start px-6 py-2 bg-econtia hover:bg-econtia-dark text-white font-medium rounded-lg transition-all duration-300 transform ${
                       hoveredProject === project.id
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-4"
@@ -141,12 +141,12 @@ export function PortfolioSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="max-w-2xl mx-auto p-8 bg-gray-800 rounded-2xl border border-gray-700 shadow-lg">
-            <p className="text-xl text-gray-300 mb-6">
+          <div className="max-w-2xl mx-auto p-8 bg-white rounded-2xl border border-gray-200 shadow-sm">
+            <p className="text-xl text-gray-700 mb-6">
               ¿Tienes un proyecto en mente?
             </p>
             <button
-              className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="px-8 py-3 bg-econtia hover:bg-econtia-dark text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               onClick={() => {
                 document.getElementById("contact")?.scrollIntoView({
                   behavior: "smooth",
